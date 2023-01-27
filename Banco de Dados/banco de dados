@@ -1,0 +1,70 @@
+Banco de Dados:
+
+vamos trabalhar com SQLite e Firebase
+
+MS Sql Server, Oracle, MySQL (Maria DB), PostGreSQL
+
+Sugestão para banco na net é PHP-MySQL no backend
+Sugestão de estudar também o padrão ANSI SQL
+
+
+SQL (Linguagem de Consulta)
+
+No curso usaremos o site www.sqliteonline.com para aprender a programar em SQLite
+
+O termo CRUD vem de (Creat, Read, Update, Delete), antigamente chamava-se ABCD (Add, Browser, Commit, Delete )
+
+
+No banco de dados as linhas são chamadas de registros, ou seja, em cada linha deve conter todos os dados de um registro! conter todos os dados da entidade.
+
+Nas colounas temos os campos que definem os dados de entreada e saida dos registros
+
+Toda tabela possui um campo chamado de campo chave. Esse campo é único que identifica e diferencia um registro do outro, uma exclusividade. Por isso não se recomenda usar o nome como campo chave.
+
+Drop! apagar registro
+
+-- Para criar a tabela digite:(NOTA: ONDE TIVER ('') É UMA ENFASE NÃO PRECISA COLOCAR!)
+
+CREATE table 'CLIENTES' (
+  codigo integer PRIMARY KEY AUTOINCREMENT, 
+  nome text,
+  endereço varchar(50),
+  teleforne char(20),
+  email text
+)
+
+-- Para inserir os dados digite:
+
+NSERT INTO CLIENTES(nome, endereço, teleforne, email) VALUES( "Thiago Aquino", "Cajazeiras", "031495546","tarugoaquino@gmail.com" )
+
+-- Para consultar os dados digite:
+
+SELECT*FROM CLIENTES # O * define que queremos consultar todos os dados!
+                     # Se quiser especificar o campo: SELECT 'campo'FROM CLIENTE!
+
+***A parte mais importante para o cliente no uso do banco de dados é o uso dos relatórios (select). Por isso agora vamos criar um filtro para criar um relatório.
+
+Assim podemos:
+
+*Ordenar ->-> SELECT*FROM produtos ORDER BY descrit; # Ordenou o campo por ordem alfabética.
+
+*Ordenar decrescente ->-> SELECT*FROM produtos ORDER BY descrit DESC; # ordenou invertido, no campo, a ordem alfabética
+
+*Filtrar ->-> SELECT*FROM produtos WHERE valor>=5; # filtrou preços maiores que 5.
+
+*Distinct ->-> SELECT DISTINCT valor FROM produtos #seçeciona todos o dados diferentes de um campo sem apresentar a duplicidade se existir
+
+*para desiginar mais parâmetros na sua busca, use a função AND
+->-> SELECT*FROM produtos where valor >2 and cod <7;
+
+-- Para excluir um registro digite:
+
+DELETE FROM CLIENTES WHERE codigo=2; # Aqui exclui especificamente um registro
+                                     # Se ecrever: DROP TABLE 'CLIENTE', exclui toda a tabela.
+
+-- Para alterar os dads digite:
+
+UPDATE CLIENTES SET endereço = "barra" WHERE codigo=1 # Especifique no SET qual o campo e iguale à alteração. no Where indique o registro!
+
+
+

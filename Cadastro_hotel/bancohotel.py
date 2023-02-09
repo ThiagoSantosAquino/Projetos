@@ -12,6 +12,6 @@ cur.execute(""" CREATE TABLE IF NOT EXISTS bancohotel(
             nascimento integer,
             endereço text,
             telefone text)
-            """)
+            """)                    # Criando a tabela do banco de dados
 
 

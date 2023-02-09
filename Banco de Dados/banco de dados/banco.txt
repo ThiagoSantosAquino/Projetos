@@ -1,0 +1,15 @@
+> SQLite <
+SQL - (Liguagem de consulta)
+CRUD - (Create, Read, Update, Delete)
+
+site: sqliteonline.com
+site: w3schools.com (sql)
+
+varchar - caracteres (ocupa oq usa)
+char - caracteres (ocupa oq foi determinado)
+
+DROP table = apagar td
+DELETE 
+
+ORDER BY 
+DESC - decrescente 

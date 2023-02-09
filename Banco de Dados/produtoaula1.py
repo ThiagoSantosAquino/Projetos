@@ -1,8 +1,10 @@
+
+
 # Importa a biblioteca do Banco de Dados do SQlite3
 import sqlite3 as sq
 
 # Criar uma conexão com o Banco de dados e cria o banco se não existir.
-conn = sq.connect ("Produtos.db")
+conn = sq.connect ("Produto.db")
 print (conn)
 
 # O cursor é um MiddleWare entre a Consulta
@@ -11,7 +13,7 @@ cur = conn.cursor()
 
 
 cur.execute("""
-            CREATE TABLE IF NOT EXISTS Produtos   (
+            CREATE TABLE IF NOT EXISTS Produto   (
             codigo integer PRIMARY KEY AUTOINCREMENT,
             descricao text,
             preco real,
@@ -61,3 +63,4 @@ print("Dados Cadastrados")
 
 cur.execute("""DELETE FROM Produtos WHERE codigo=2""")
 conn.commit()
+

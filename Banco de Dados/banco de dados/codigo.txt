@@ -1,0 +1,22 @@
+#0
+CREAT TABLE Clientes (
+    codigo INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome text,
+    endereço varchar (50),
+    telefone char(20),
+    email text
+)
+
+#1
+ INSERT INTO Clientes (nome, endereço, telefone, email) VALUES (
+    "Vinicius Costa", "Rua abc, 123", "999888777", "vIni@gmail.com"
+ )
+
+ #2
+ SELECT * FROM clientes
+
+ #3
+ DELETE FROM clientes WHERE codigo=2;
+
+ #4
+ UPDATE clientes SET endereço = "Avenida Brasil, 987" WHERE codigo=1

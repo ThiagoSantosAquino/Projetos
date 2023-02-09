@@ -1,0 +1,2 @@
+def relatorios():
+    pass

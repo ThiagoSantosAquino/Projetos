@@ -15,7 +15,7 @@ def inclusao():
         peso = float(input("Digite o peso (Kg): "))
         venc = input("Digite a data de vencimento (AAAA/MM/DD): ")
 
-        cur.execute(f"sqlStr[3]", (descricao, preco, qnt, peso, venc))
+        cur.execute(f"sqlstrings[3]", (descricao, preco, qnt, peso, venc))
     
         conn.commit()
         opcao = input("Continuar? (S/N): ").upper()

@@ -53,7 +53,7 @@ while resp == "Y":
            ) # Numa doc String como no exemplo acima as variavéis são chamadas em um tupla fora da doc string e representadas com interrogações 
             # como se fosse um coringa. Eles organizam na ordem em que foi escrita.
 
-    #Salvar ps dados no banco de dados no repositório local
+    #Salvar os dados no banco de dados no repositório local
     conn.commit()
 
     print("Deseja cadastrar mais algum produto? (Y/N)?")

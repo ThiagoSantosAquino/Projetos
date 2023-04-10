@@ -12,6 +12,7 @@ def menu():
     print("="*50)
     
     opcao = input('').upper()
+    #Cria-se um dicionário a seguir para associar com a resposta do usuário
     opcoesMenu = {
         '1': "inclusao()",
         '2': "menuAlterar()",

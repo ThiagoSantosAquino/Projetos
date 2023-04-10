@@ -25,7 +25,7 @@ Drop! apagar registro
 
 -- Para criar a tabela digite:(NOTA: ONDE TIVER ('') É UMA ENFASE NÃO PRECISA COLOCAR!)
 
-CREATE table 'CLIENTES' (
+CREATE TABLE IF NO EXISTIS 'clientes' (
   codigo integer PRIMARY KEY AUTOINCREMENT, 
   nome text,
   endereço varchar(50),
@@ -35,11 +35,11 @@ CREATE table 'CLIENTES' (
 
 -- Para inserir os dados digite:
 
-NSERT INTO CLIENTES(nome, endereço, teleforne, email) VALUES( "Thiago Aquino", "Cajazeiras", "031495546","tarugoaquino@gmail.com" )
+NSERT INTO clientes(nome, endereço, teleforne, email) VALUES( "Thiago Aquino", "Cajazeiras", "031495546","tarugoaquino@gmail.com" )
 
 -- Para consultar os dados digite:
 
-SELECT*FROM CLIENTES # O * define que queremos consultar todos os dados!
+SELECT*FROM clientes # O * define que queremos consultar todos os dados!
                      # Se quiser especificar o campo: SELECT 'campo'FROM CLIENTE!
 
 ***A parte mais importante para o cliente no uso do banco de dados é o uso dos relatórios (select). Por isso agora vamos criar um filtro para criar um relatório.
@@ -59,12 +59,12 @@ Assim podemos:
 
 -- Para excluir um registro digite:
 
-DELETE FROM CLIENTES WHERE codigo=2; # Aqui exclui especificamente um registro
+DELETE FROM clientes WHERE codigo=2; # Aqui exclui especificamente um registro
                                      # Se ecrever: DROP TABLE 'CLIENTE', exclui toda a tabela.
 
 -- Para alterar os dads digite:
 
-UPDATE CLIENTES SET endereço = "barra" WHERE codigo=1 # Especifique no SET qual o campo e iguale à alteração. no Where indique o registro!
+UPDATE clientes SET endereço = "barra" WHERE codigo=1 # Especifique no SET qual o campo e iguale à alteração. no Where indique o registro!
 
 
 
